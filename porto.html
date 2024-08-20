@@ -2,9 +2,20 @@
 <html>  
 <head>
     
-<title>My wbesite</title>
+<title>My website</title>
 </head>
 <style>
+/*cover*/
+body {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+
+
+
 /* header */
 .header {
   text-align: center;
@@ -37,33 +48,34 @@
   color: black;
 }
 
-
-/*cover*/
-body {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-
-
 </style>
 <body>
+
+  
+
+  
+  
 
 <!--tulisan header-->
 <div class ="header">
     <h1>My web</h1>
+     <h2 id="demo">Good Evening!</h2>
+     <p><span id="tanggalwaktu"></span></p>
 </div>
+
+
 
 <!--link dan tulisan pada navigation bar-->
 <div class="topnav">
-    <a href="#">Link</a>
+    <a href="jam.html">Jam</a>
     <a href="#">Link</a>
     <a href="#">Link</a>
   </div>
 
- <!--tulisan javascript-->
-<p id="demo">Good Evening!</p>
+  
+ 
+  
+  
      
 
 <script>
@@ -73,8 +85,11 @@ body {
     else if (new Date().getHours() < 18) {
       document.getElementById("demo").innerHTML = "Good afternoon!";
     }
+
+    var dt = new Date();
+    document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleTimeString();
+
+
 </script> 
-
 </body>
-
 </html>
