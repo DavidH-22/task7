@@ -1,14 +1,13 @@
 
-// Get the video
-var video = document.getElementById("Video");
+// mengambil video/global variable
+	var video = document.getElementById("Video");
 
-// Get the button
-var btn = document.getElementById("Btn");
+// mengambil button/global variable
+	var btn = document.getElementById("Btn");
 
-     // Pause and play the video, and change the button text
-    function myFunction() {
-   	 if (video.paused) {
-		video.play();
+// play/pause dan tulisannya/local variable
+    function playpause() {
+   	 	if (video.paused) {video.play();
 		btn.innerHTML = "Pause";
 		} else {
 		video.pause();
@@ -16,6 +15,7 @@ var btn = document.getElementById("Btn");
 		}
 	}	
 
+//menampilkan jam/local variable
 	function showTime() {
 		var a_p = "";
 		var today = new Date();
@@ -25,7 +25,7 @@ var btn = document.getElementById("Btn");
 		curr_hour = checkTime(curr_hour);
 		curr_minute = checkTime(curr_minute);
 		curr_second = checkTime(curr_second);
-	 document.getElementById('clock').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+	 	document.getElementById('clock').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
 		}
 
 	function checkTime(i) {
@@ -34,6 +34,6 @@ var btn = document.getElementById("Btn");
 		}
 		return i;
 	}
-	setInterval(showTime, 500);
+		setInterval(showTime, 500);
 
 

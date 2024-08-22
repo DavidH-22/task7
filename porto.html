@@ -1,76 +1,73 @@
 <!DOCTYPE html>
 <html>  
-<head>
-    
-<title>My website</title>
-</head>
-<style>
-/*cover*/
-body {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
+  <head>
+    <title>My website</title>
+    <link rel="icon" type="image/x-icon"  
+    href="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png">   
+  </head>
+  <style>
+
+    /*cover*/
+      body {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+      }
 
 
 
 
 
-/* header */
-.header {
-  text-align: center;
-  padding: 20px;
-}
+    /* header */
+      .header {
+      text-align: center;
+      padding: 20px;
+      }
 
-.header h1 {
-    font-size: 50px;
-}
+      .header h1 {
+      font-size: 50px;
+      }
 
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
+    /* Style the top navigation bar */
+      .topnav {
+      overflow: hidden;
+      background-color: #333;
+      }
 
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    /* Style the topnav links */
+      .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+    /* Change color on hover */
+      .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+      }
 
-</style>
-<body>
-
+  </style>
   
-
-  
-  
-
-<!--tulisan header-->
-<div class ="header">
-    <h1>My web</h1>
-     <h2 id="demo">Good Evening!</h2>
-     <p><span id="tanggalwaktu"></span></p>
-</div>
+  <body>
+    <!--tulisan header-->
+      <div class ="header">
+      <h1>My web</h1>
+      <h2 id="demo">Good Evening!</h2>
+      <p><span id="waktu"></span></p>
+      </div>
 
 
 
-<!--link dan tulisan pada navigation bar-->
-<div class="topnav">
-    <a href="jam.html">Jam</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-  </div>
+    <!--link dan tulisan pada navigation bar-->
+      <div class="topnav">
+      <a href="jam.html">video</a>
+      <a href="formulir.html">formulir</a>
+      <a href="#">Link</a>
+      </div>
 
   
  
@@ -78,18 +75,20 @@ body {
   
      
 
-<script>
-     if (new Date().getHours() < 11) {
-      document.getElementById("demo").innerHTML = "Good morning!";
-    }
-    else if (new Date().getHours() < 18) {
-      document.getElementById("demo").innerHTML = "Good afternoon!";
-    }
+    <script>
+      <!--menampilkan salam-->
+        if (new Date().getHours() < 11) {
+        document.getElementById("demo").innerHTML = "Good morning!";
+        }
+        else if (new Date().getHours() < 18) {
+        document.getElementById("demo").innerHTML = "Good afternoon!";
+        }
 
-    var dt = new Date();
-    document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleTimeString();
+      <!--menampilan jam saat mengakses web-->
+        var dt = new Date();
+        document.getElementById("waktu").innerHTML = dt.toLocaleTimeString();
 
 
-</script> 
-</body>
+    </script> 
+  </body>
 </html>
