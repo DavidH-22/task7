@@ -10,9 +10,20 @@
         echo "nama belakang". $namaB;
         echo "<br/>"
     
+        echo "nomortelepon". $notelp;
+        echo "<br/>"
+    
+        echo "provinsi". $provinsi;
+        echo "<br/>"
+
+        echo "pesan". $subject;
+        echo "<br/>"
+    
 
         ?>
 
 
 </body>
 </html>
+
+
