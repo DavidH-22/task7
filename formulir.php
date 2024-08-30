@@ -1,29 +1,43 @@
-<html>
-<body>
 
-    <?php 
-        $namaD = $_GET["namadepan"];
-        $namaB = $_GET["namabelakang"];
 
-        echo "nama depan" . $namaD;
-        echo "<br/>"
-        echo "nama belakang". $namaB;
-        echo "<br/>"
+<?php 
     
-        echo "nomortelepon". $notelp;
-        echo "<br/>"
+        if($_POST['submit']=="submit"){
+            $namaD = $_POST["namaD"];
+            $namaB = $_POST["namaB"];
+            $notelp = $_POST["notelp"];
+            $Provinsi = $_POST["Provinsi"];
+            $subject = $_POST["subject"];
+        
+        }
     
-        echo "provinsi". $provinsi;
-        echo "<br/>"
+        else {
+            $cek=mysql_num_rows(mysql_query("select Nomor_Telefon from data_pengunjung where Nomor_telefon='$_POST'"))}
+            if($cek> 0){
+                ?>
+                <script Language="Java Script"> 
+                alert('Nomor telefon sudah dipakai')
+                </script>
+                <?php
+            }
 
-        echo "pesan". $subject;
-        echo "<br/>"
+            $input ="INSERT INTO data_pengunjung(Nama_Depan,Nama_Belakang,Nomor_telefon,Provinsi,Pesan)";
+            $query_input=mysql_query($input);
+
+            if($query_input){
+                ?>
+            <script language="Java Script">
+            alert('input berhasil')
+            <script>
+            <?php
+            }
+            else{
+                echo"input gagal";
+            }
+
+?>
     
+            
 
-        ?>
-
-
-</body>
-</html>
 
 
