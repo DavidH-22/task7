@@ -20,7 +20,7 @@ class FormulirController extends Controller
         // Cari data berdasarkan ID
        
         $formulirs = Formulir::all();
-        return view('formulir',compact('provinsi','formulirs'));
+        return view('index', compact('provinsi','formulirs'));
     }
     
     //menyimpan data yang di submit ke dalam database
@@ -43,7 +43,7 @@ class FormulirController extends Controller
     public function formdestroy($id)
     {
         
-        $formulirs = Formulir::all();
+        $formulirs = Formulir::find($id);
         return view('formulir-delete', compact('formulirs'));
     }
 

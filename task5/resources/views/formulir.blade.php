@@ -51,42 +51,7 @@
     </head>
     <body>
         <h3>Formulir </h3>
-        <div class="container">
-            
-            <form action="{{ url('formulir') }}" method="POST">
-            @csrf
-                <!-- Input  Nama Depan -->
-                <label for="namaD">Nama Depan</label>
-                <input type="text" id="namaD" name="namaD" placeholder="Nama anda.." required><br>
-              
-                <!-- Input  Nama Belakang -->
-                <label for="namaB">Nama Belakang</label>
-                <input type="text" id="namaB" name="namaB" placeholder="Nama belakang anda.." required><br>
-
-                <!-- Input  Nomor Telefon -->
-                <label for="notelp">Nomor Telefon</label>
-                <input type="text" id="notelp" name="notelp" placeholder="08xxxxxxx" required><br>
-
-                <!-- Select Provinsi -->
-                <label for="provinsi">Provinsi</label>
-                <select id="provinsi" name="provinsi" required>
-                    <!-- (List  provinsi) -->
-                    @foreach( $provinsi as $key => $value)
-                    <option value="{{ $key }}">{{ $value }}</option>
-                    @endforeach
-                </select><br>
-          
-                <!-- Input  Pesan -->
-                <label for="pesan">Pesan</label>
-                <textarea id="pesan" name="pesan" placeholder="Masukan pesan.." style="height:200px" required></textarea><br>
-          
-                <!-- tombol submit -->
-                <input type="submit" name="submit" value="submit">
-                
-                
-            </form>
-            
-        </div>
+        
         <!--menghapus data-->
             <div class="destroy">
             @foreach ($formulirs as $formulir)

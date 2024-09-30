@@ -26,17 +26,17 @@
            </th>
                 <tbody>
                 @foreach ($formulirs as $formulir) 
-                               <form action="{{ route('formulir.destroy', $formulir->id) }}" method="post">
+                               <form action="{{ route('formulir.destroy', $formulirs->id) }}" method="POST">
                                 @csrf
                                @method('DELETE')
                     <tr>
-                           <td>{{ $formulir->namaD}}</td> 
-                           <td>{{ $formulir->namaB }}</td>
-                           <td>{{ $formulir->notelp}}</td>
-                           <td>{{ $formulir->provinsi }}</td>
-                           <td>{{ $formulir->pesan }}</td>
-                           <td><button type="submit" onclick="return confirm('Apakah anda yakin untuk menghapus?')">Delete</button></td>
-                           <td><a href="{{ route('formulir.edit', $formulir->id) }}">edit</a></td>
+                           <td>{{ $formulirs->namaD}}</td> 
+                           <td>{{ $formulirs->namaB }}</td>
+                           <td>{{ $formulirs->notelp}}</td>
+                           <td>{{ $formulirs->provinsi }}</td>
+                           <td>{{ $formulirs->pesan }}</td>
+                           <td><button type="delete" onclick="return confirm('Apakah anda yakin untuk menghapus?')">Delete</button></td>
+                           <td><a href="{{ route('formulir.edit', $formulirs->id) }}">edit</a></td>
                        </tr>
                        
                    @endforeach
